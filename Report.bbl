@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{RPL}
+Winter, T., Brandt, A., Clausen, T., Hui, J., Kelsey, R., Levis, P., Pister,
+  K., Struik, R.:
+\newblock Rpl: Ipv6 routing protocol for low power and lossy networks,
+  draft-ietf-roll-rpl-19.
+\newblock (March 13, 2011)
+
+\bibitem{RoutingMetrics}
+Vasseur, J.P., Kim, M., Pister, K., Dejean, N., Barthel, D.:
+\newblock Routing metrics used for path calculation in low-power and lossy
+  networks.
+\newblock Internet Engineering Task Force (IETF) (March 2012)
+
+\bibitem{BLIP&TinyRPL}
+Ko, J., Dawson-Haggerty, S., Gnawali, O., Culler, D., Terzis, A.:
+\newblock Evaluating the performance of rpl and 6lowpan in tinyos.
+\newblock (April, 2011)
+
+\bibitem{LPLN}
+Ko, J., Terzis, A., Dawson-Haggerty, S., Culler, D.C., W.Hui, J., Levis, P.:
+\newblock Connecting low-power and lossy networks to the internet.
+\newblock (April 2011)
+
+\bibitem{of0}
+Thubert, P.:
+\newblock Rpl objective function 0, draft-ietf-roll-of0-05.
+\newblock ROLL Internet-Draft (July 9, 2011)
+
+\bibitem{MRHOF}
+Gnawali, O., Lewis, P.:
+\newblock The minimum rank objective function with hysteresis,
+  draft-ietf-roll-minrank-hysteresis-of-00.
+\newblock Networking Working Group Internet-Draft (April 14, 2011)
+
+\bibitem{TinyRPLcompare}
+Ko, J., Eriksson, J., Nicolas, T., Dawson-Haggerty, S., Terzis, A., Dunkels,
+  A., Culler, D.:
+\newblock Contikirpl e tinyrpl: Happy together.
+\newblock Proceedings of the workshop on Extending the Internet to Low power
+  and Lossy Networks (Chicago, USA, Apr. 2011)
+
+\end{thebibliography}

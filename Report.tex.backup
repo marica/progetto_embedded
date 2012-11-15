@@ -280,9 +280,6 @@ to that of the node and a reception power value in excess of the threshold. In t
 \section*{RPL in TinyOS}
 The RPL implementations in TinyOS is centered in two layers of the software stack, blip, the TinyOS 6LoWPAN stack, and TinyRPL the actual implementation of the RPL standard (Figure \ref{fig:BLIP}). This section introduces the interfaces and the interactions between TinyRPL and BLIP and also the performance of TinyRPL/BLIP compared with CTP (Collection Tree Protocol). 
 
-\subsection*{TinyOS}
-TinyOS is an open source operating system for embedded devices such as motes. It is write in Nesc programming language, a dialect of C. The Kernel has a hierarchical two-layers scheduler: one for events and one for tasks.Events have right of first refusal on other events and tasks. An event could therefore interrupt another event to avoid race conditions requires the use of keywords Atomic. The code structure is based on intefaces, modules and commands whereas files are arranged in configuration files, headers and module files.
-
 \subsection*{BLIP (Berkley Low-Power IP)}
 Blip, is the IPv6/6LoWPAN stack for TinyOS 2.x for embedded systems. The goal of this implementation is provide a suite to build new real world applications. Blip implements the 6LoWPAN header compression, 6LoWPAN neighbour discovery and DHCPv6 to support the use of IPv6 in the upper layers \cite{BLIP&TinyRPL}. Blip also provides a layered IP forwarding abstraction which allows routing protocols such as RPL to be implemented on top of the ICMP engine. Regarding communication, it offers the possibility of two different addressing modes: static address mode and DHCPv6 address mode. In static address mode a static address is configured at compile time adding the unique node ID to the IPv6 prefix. BLIP also offers two link-local address:
 \begin{enumerate}
@@ -296,14 +293,13 @@ BLIP stack is implemented using 4 different main layers:
 \item neighbor discovery
 \item dispatch
 \end{enumerate}
-In its interaction with TinyRPL, blip initiates the TinyRPL operations once a node is assigned a global address. Once TinyRPL establishes a route using the RPL-related ICMPv6 messages the route is added to blip's routing table. The forwarding engine in blip makes routing decisions by performing lookups in this table and also includes optional up-calls to the routing layer for each packet being forwarded; this allows the routing protocol to implement non-standard tests for packet forwarding. For instance, TinyRPL checks for an optional routing header to discover the existence of any routing loops. Blip also manages per-interface message queues which are used to buffer outgoing packets, necessary to support bursts of outgoing packets such as those generated from sending a fragmented packet and that caused by head-of-line blocking during retransmissions. Blip version 2.0 provides the implementation of the last standard header compression described in the draft \cite{LPLN}. As regards the consumer, in the Figure 
-\ref{fig:Memory consumption} 
+In its interaction with TinyRPL, blip initiates the TinyRPL operations once a node is assigned a global address. Once TinyRPL establishes a route using the RPL-related ICMPv6 messages the route is added to blip's routing table. The forwarding engine in blip makes routing decisions by performing lookups in this table and also includes optional up-calls to the routing layer for each packet being forwarded; this allows the routing protocol to implement non-standard tests for packet forwarding. For instance, TinyRPL checks for an optional routing header to discover the existence of any routing loops. Blip also manages per-interface message queues which are used to buffer outgoing packets, necessary to support bursts of outgoing packets such as those generated from sending a fragmented packet and that caused by head-of-line blocking during retransmissions. Blip version 2.0 provides the implementation of the last standard header compression described in the draft \cite{LPLN}. As regards the consumer, in the table 
 we can see that the implementation of Blip and TinyRPL requires a small consumption of resources. For example, the average consumption of the memory depends on the type of downward routing used.
 
 \begin{figurehere}
  \centering
 \includegraphics{eps/memory}
- \caption{Memory Usage}
+ \caption{Some single-column figure caption}
  \label{fig:Memory consumption}
 \end{figurehere}
 
@@ -500,7 +496,6 @@ interface RPLRoutingEngine{
 
 \item RPLRoutingEngineC.nc: configuration file. Contains the definition of the components and their association with their interfaces. 
 \item RPLRoutingEngineP.nc: module that implements the routing within the DODAG and commands defined in the interface definition files RPLRoutingEngine.nc. In particular, in this file are implemented the tasks of sending messages across the network (eg DIO, DIS) but does not implement the DAO which are implemented in a file devoted specifically to this type of messages. It also implements all operations performed on the DIO message and operations triggered for the maintenance of the network and fault management. In particular, the DIO packet is created through a series of successive assignments and a bundling carried out with the use of a vector. In detail, the code is as follows, where we see the distinction between operating modes with respect to the objective functions MRHOF (with metrics) and 0OF (without metric).
-
 \begin{scriptsize}
 \begin{lstlisting}
 #ifdef RPL_OF_MRHOF 
@@ -555,9 +550,7 @@ randomTime += call Random.rand32() % randomTime;
 call TrickleTimer.startOneShot(randomTime);
 \end{lstlisting}
 \end{scriptsize}
-
 the same procedure is adopted for DIS packets that I need in the event that a node wants to request the sending of DIO packets. RPL provides that a node can solicit its neighbors to send DIO packets to be able to attach to DODAG, which is done to avoid having to wait every time the periodic sending of DIOs which can have a relatively long period. It is therefore set  a timer expiration by a periodic sending of DIOs, after which, if the event has not yet occurred, it will automatically send DIS packets. In the code this condition is implemented as follows:
-
 \begin{scriptsize}
 \begin{lstlisting}
 call InitDISTimer.startPeriodic(DIS_INTERVAL); 
@@ -568,7 +561,6 @@ call InitDISTimer.startPeriodic(DIS_INTERVAL);
 includes interface definition and components and the module that implements the routing of the only DAO packets. Specifically we have:
 \begin{itemize}
 \item RPLDAORoutingEngine.nc: file that defines the commands for the mentioned interface.
-
 \begin{scriptsize}
 \begin{lstlisting}
  interface RPLDAORoutingEngine{ 
@@ -578,10 +570,8 @@ includes interface definition and components and the module that implements the 
 }
 \end{lstlisting}
 \end{scriptsize}
-
 \item RPLDAORoutingEngineC.nc: is the configuration file which lists the interfaces provided and used, in addition to doing the component-interface wiring.
 \item RPLDAORoutingEngineP.nc: is the file that implements the module DAORoutingEngine. Here, are implemented all the rules of creation and routing of DAO packets. As all the messages defined up to now, also the DAOmessages provides a timer that sets the frequency with which they are sent. In the code, the initial value of the sending rate is set to 10000 and updated according to the rule:
-
 \begin{scriptsize}
 \begin{lstlisting}   
    if (dao_double_count < dao_double_limit) { 
@@ -600,7 +590,6 @@ Because DAOs flow upwards, receiving a unicast DAO can trigger sending a unicast
 \item A node SHOULD delay sending a DAO message with a timer (DelayDAO). Receiving a DAO message starts the DelayDAO timer. DAO messages received while the DelayDAO timer is active do not reset the timer. When the DelayDAO timer expires, the node sends a DAO.
 \item When a node adds a node to its DAO parent set, it SHOULD schedule a DAO message transmission.
 \end{enumerate}
-
 \begin{scriptsize}
 \begin{lstlisting}
 command void RPLDAORouteInfo.newParent() 
@@ -645,12 +634,12 @@ For the node that will act as the root of the routing tree (e.g., the edge route
 
 %-----------------------------------------------------------------------------
 \section*{Conclusion}
-RPL protocol is implemented in TinyOS based guidelines of the draft \cite{RPL} . At the moment only two objective functions are implemented and only ETX metric. Also TinyRPL supports only a single RPLInstanceID while supporting multiple DODAGIDs and it does not support security options. 
-Due to the configuration of TinyRPL, RPL require the interfaces of BLIP to interface with the link layer. For this reason packets can then be sent through a transport layer component such as the UDP component supported by BLIP 2.0 (the interaction between TinyRPL and Blip is shown in figure \ref{fig:BLIP}). 
+RPL protocol is implemented in TinyOS based guidelines of the draft [] . At the moment only two objective functions are implemented and only ETX metric. Also TinyRPL supports only a single RPLInstanceID while supporting multiple DODAGIDs and it does not support security options. 
+Due to the configuration of TinyRPL, RPL require the interfaces of BLIP to interface with the link layer. For this reason packets can then be sent through a transport layer component such as the UDP component supported by BLIP 2.0 (the interaction between TinyRPL and Blip is shown in figure []). 
 Currently TinyRPL is only supported on the telosb and epic platforms. Therefore, TinyRPL is not supported on the TOSSIM simulator which requires a micaz binary.The only simulation environment available for TinyRPL simulation is Cooja. All the tests regarding RPL protocol implemented in TinyOS are simulated by Cooja platform of Contiki OS. In fact, this platform can run TinyOS applications by selecting the result of the compilation of the mote telosb. The application to test the RPL is called TestRPL but you can also use other applications such as PPPRouter combined with UDPEcho. TestRPL currently does not work correctly on Cooja simulator.
 
 \section*{Future works}
-RPL protocol in TinyOS could be improved and thus increase its performance, going to implement other metrics that produce different objective functions and implementing security options. Purpose might be going to make different DODAGs based on the resource and not on minimization of the energy used to maintain the paths. 
+RPL protocol in TinyOS could be improved and thus increase its performance, going to implement other metrics that produce different objective functions and implementing security options. Purpose might be going to make DODAG different based on the resource and not on I minimize the energy used to maintain the paths. 
 This would lead to a more smart routing.
 %-----------------------------------------------------------------------------
 % We suggest the use of JabRef for editing your bibliography file (Report.bib)

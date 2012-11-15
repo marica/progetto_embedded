@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{GnawaliApril142011}
+O.~Gnawali, P.L.:
+\newblock The minimum rank objective function with hysteresis,
+  draft-ietf-roll-minrank-hysteresis-of-00.
+\newblock Networking Working Group Internet-Draft (April 14, 2011)
+
+\bibitem{KoApril2011a}
+Ko~JeongGil, Dawson Haggerty~Stephen, G.O.C.D.T.A.:
+\newblock Evaluating the performance of rpl and 6lowpan in tinyos.
+\newblock (April, 2011)
+
+\bibitem{KoChicagoUSAApr.2011}
+Ko~JeongGil, Eriksson~Joakim, T.N.D.H.S.T.A.D.A.C.D.:
+\newblock Contikirpl e tinyrpl: Happy together.
+\newblock Proceedings of the workshop on Extending the Internet to Low power
+  and Lossy Networks (Chicago, USA, Apr. 2011)
+
+\bibitem{KoApril2011}
+Ko~JeongGil, Terzis~Andreas, D.H.S.E.D.W.J.L.P.:
+\newblock Connecting low-power and lossy networks to the internet.
+\newblock (April 2011)
+
+\bibitem{P.July92011}
+P., T.:
+\newblock Rpl objective function 0, draft-ietf-roll-of0-05.
+\newblock ROLL Internet-Draft (July 9, 2011)
+
+\bibitem{VasseurMarch2012}
+Vasseur~JP., Kim~M., P.K.D.N.B.D.:
+\newblock Routing metrics used for path calculation in low-power and lossy
+  networks.
+\newblock Internet Engineering Task Force (IETF) (March 2012)
+
+\end{thebibliography}

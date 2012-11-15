@@ -1,16 +1,16 @@
 % This file was created with JabRef 2.7b.
 % Encoding: UTF-8
 
-@ARTICLE{MRHOF,
+@ARTICLE{Gnawali2011,
   author = {Gnawali, O. and Lewis, P.},
   title = {The Minimum Rank Objective Function with Hysteresis, draft-ietf-roll-minrank-hysteresis-of-00},
   journal = {Networking Working Group 
 	
 	Internet-Draft},
-  year = {April 14, 2011}
+  year = {2011}
 }
 
-@ARTICLE{BLIP&TinyRPL,
+@ARTICLE{Ko2011,
   author = {Ko, JeongGil and
 	
 	Dawson-Haggerty, Stephen and
@@ -21,10 +21,10 @@
 	
 	Terzis, Andreas},
   title = {Evaluating the Performance of RPL and 6LoWPAN in TinyOS},
-  year = {April, 2011}
+  year = {2011}
 }
 
-@ARTICLE{TinyRPLcompare,
+@ARTICLE{Ko2011a,
   author = {Ko, JeongGil and
 	
 	Eriksson, Joakim and
@@ -41,11 +41,11 @@
   title = {ContikiRPL e TinyRPL: Happy Together},
   journal = {Proceedings of the workshop on Extending the Internet to Low power
 	and Lossy Networks},
-  year = {Chicago, USA, Apr. 2011},
+  year = {2011},
   institution = {SIGPLAN Notices }
 }
 
-@ARTICLE{LPLN,
+@ARTICLE{Ko2011b,
   author = {Ko, JeongGil and
 	
 	Terzis, Andreas and
@@ -58,18 +58,18 @@
 	
 	Levis, Philip},
   title = {Connecting Low-Power and Lossy Networks to the Internet},
-  year = {April 2011},
+  year = {2011},
   institution = {IEEE Communications Magazine}
 }
 
-@ARTICLE{of0,
+@ARTICLE{Thubert2011,
   author = {Thubert, P.},
   title = {RPL objective function 0, draft-ietf-roll-of0-05},
   journal = {ROLL Internet-Draft},
-  year = {July 9, 2011}
+  year = {2011}
 }
 
-@ARTICLE{RoutingMetrics,
+@ARTICLE{Vasseur2012,
   author = {Vasseur, Jean Philippe and
 	
 	Kim, M. and
@@ -82,14 +82,14 @@
   title = {Routing Metrics Used for Path Calculation in Low-Power and Lossy
 	Networks},
   journal = {Internet Engineering Task Force (IETF)},
-  year = {March 2012}
+  year = {2012}
 }
 
-@ARTICLE{RPL,
+@ARTICLE{Winter2011,
   author = {T. Winter and A. Brandt and T. Clausen and J. Hui and R. Kelsey and
 	P. Levis and K. Pister and R. Struik},
   title = {RPL: IPv6 Routing Protocol for Low power and Lossy Networks, draft-ietf-roll-rpl-19},
-  year = {March 13, 2011},
+  year = {2011},
   owner = {marica},
   timestamp = {2012.11.13}
 }

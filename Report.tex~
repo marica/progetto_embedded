@@ -650,7 +650,7 @@ Due to the configuration of TinyRPL, RPL require the interfaces of BLIP to inter
 Currently TinyRPL is only supported on the telosb and epic platforms. Therefore, TinyRPL is not supported on the TOSSIM simulator which requires a micaz binary.The only simulation environment available for TinyRPL simulation is Cooja. All the tests regarding RPL protocol implemented in TinyOS are simulated by Cooja platform of Contiki OS. In fact, this platform can run TinyOS applications by selecting the result of the compilation of the mote telosb. The application to test the RPL is called TestRPL but you can also use other applications such as PPPRouter combined with UDPEcho. TestRPL currently does not work correctly on Cooja simulator.
 
 \section*{Future works}
-RPL protocol in TinyOS could be improved and thus increase its performance, going to implement other metrics that produce different objective functions and implementing security options. Purpose might be going to make different DODAGs based on the resource and not on minimization of the energy used to maintain the paths. 
+RPL protocol in TinyOS could be improved and thus increase its performance, going to implement other metrics that produce different objective functions and implementing security options. Purpose might be going to make DODAG different based on the resource and not on I minimize the energy used to maintain the paths. 
 This would lead to a more smart routing.
 %-----------------------------------------------------------------------------
 % We suggest the use of JabRef for editing your bibliography file (Report.bib)

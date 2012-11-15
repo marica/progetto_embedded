@@ -1,8 +1,12 @@
 % This file was created with JabRef 2.7b.
 % Encoding: UTF-8
 
-@ARTICLE{MRHOF,
-  author = {Gnawali, O. and Lewis, P.},
+
+
+@ARTICLE{GnawaliApril142011,
+  author = {O. Gnawali,
+	
+	P. Lewis},
   title = {The Minimum Rank Objective Function with Hysteresis, draft-ietf-roll-minrank-hysteresis-of-00},
   journal = {Networking Working Group 
 	
@@ -10,34 +14,34 @@
   year = {April 14, 2011}
 }
 
-@ARTICLE{BLIP&TinyRPL,
-  author = {Ko, JeongGil and
+@ARTICLE{KoApril2011a,
+  author = {Ko JeongGil,
 	
-	Dawson-Haggerty, Stephen and
+	Dawson Haggerty Stephen,
 	
-	Gnawali, Omprakash and
+	Gnawali Omprakash,
 	
-	Culler, David and
+	Culler David,
 	
-	Terzis, Andreas},
+	Terzis Andreas},
   title = {Evaluating the Performance of RPL and 6LoWPAN in TinyOS},
   year = {April, 2011}
 }
 
-@ARTICLE{TinyRPLcompare,
-  author = {Ko, JeongGil and
+@ARTICLE{KoChicagoUSAApr.2011,
+  author = {Ko JeongGil,
 	
-	Eriksson, Joakim and
+	Eriksson Joakim,
 	
-	Nicolas, Tsiftes and
+	Tsiftes Nicolas,
 	
-	Dawson-Haggerty, Stephen and
+	Dawson Haggerty Stephen,
 	
-	Terzis, Andreas and
+	Terzis Andreas,
 	
-	Dunkels, Adam and
+	Dunkels Adam,
 	
-	Culler, David},
+	Culler David},
   title = {ContikiRPL e TinyRPL: Happy Together},
   journal = {Proceedings of the workshop on Extending the Internet to Low power
 	and Lossy Networks},
@@ -45,52 +49,43 @@
   institution = {SIGPLAN Notices }
 }
 
-@ARTICLE{LPLN,
-  author = {Ko, JeongGil and
+@ARTICLE{KoApril2011,
+  author = {Ko JeongGil, 
 	
-	Terzis, Andreas and
+	Terzis Andreas,
 	
-	Dawson-Haggerty, Stephen and
+	Dawson Haggerty Stephen,
 	
-	Culler, David Culler and
+	E.Culler David,
 	
-	W.Hui, Jonathan and
+	W.Hui Jonathan,
 	
-	Levis, Philip},
+	Levis Philip},
   title = {Connecting Low-Power and Lossy Networks to the Internet},
   year = {April 2011},
   institution = {IEEE Communications Magazine}
 }
 
-@ARTICLE{of0,
-  author = {Thubert, P.},
+@ARTICLE{P.July92011,
+  author = {Thubert P.},
   title = {RPL objective function 0, draft-ietf-roll-of0-05},
   journal = {ROLL Internet-Draft},
   year = {July 9, 2011}
 }
 
-@ARTICLE{RoutingMetrics,
-  author = {Vasseur, Jean Philippe and
+@ARTICLE{VasseurMarch2012,
+  author = {Vasseur JP.,
 	
-	Kim, M. and
+	Kim M.,
 	
-	Pister, K. and
+	Pister K.,
 	
-	Dejean, N. and
+	Dejean N.,
 	
-	Barthel, D.},
+	Barthel D.},
   title = {Routing Metrics Used for Path Calculation in Low-Power and Lossy
 	Networks},
   journal = {Internet Engineering Task Force (IETF)},
   year = {March 2012}
-}
-
-@ARTICLE{RPL,
-  author = {T. Winter and A. Brandt and T. Clausen and J. Hui and R. Kelsey and
-	P. Levis and K. Pister and R. Struik},
-  title = {RPL: IPv6 Routing Protocol for Low power and Lossy Networks, draft-ietf-roll-rpl-19},
-  year = {March 13, 2011},
-  owner = {marica},
-  timestamp = {2012.11.13}
 }
 
